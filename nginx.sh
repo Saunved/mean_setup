@@ -29,7 +29,7 @@ echo "server {
         location / {
                 try_files $uri $uri/ =404;
         }
-}"
+}" >> /etc/nginx/sites-available/$1
 sudo ln -s /etc/nginx/sites-available/$1 /etc/nginx/sites-enabled/
 sudo sed -i 's/# server_names_hash_bucket_size 64;/server_names_hash_bucket_size 64;/g' /etc/nginx/nginx.conf
 echo "Checking for nginx errors"
