@@ -6,6 +6,7 @@ adduser $1
 echo "Added user $1"
 usermod -aG sudo $1
 echo "Gave sudo permissions to $1"
+echo "Updating firewall rules"
 ufw allow OpenSSH
 ufw enable
 echo "Enabled OpenSSH on the firewall"
