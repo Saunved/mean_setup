@@ -9,7 +9,7 @@ echo "Allowed Nginx HTTP"
 sudo mkdir -p /var/www/$1/html
 sudo chown -R $USER:$USER /var/www/$1/html
 sudo chmod -R 755 /var/www/$1
-echo "<html>
+sudo echo "<html>
     <head>
         <title>Welcome to $1!</title>
     </head>
@@ -17,14 +17,14 @@ echo "<html>
         <h1>Success!  The $1 server block is working!</h1>
     </body>
 </html>" >> /var/www/$1/html/index.html
-echo "server {
+sudo echo "server {
         listen 80;
         listen [::]:80;
 
         root /var/www/$1/html;
         index index.html index.htm index.nginx-debian.html;
 
-        server_name $1 www.$1;
+        server_name $1;
 
         location / {
                 try_files $uri $uri/ =404;
