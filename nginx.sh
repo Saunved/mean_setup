@@ -34,7 +34,7 @@ sudo echo "server {
         server_name $1;
 
         location / {
-                try_files $uri $uri/ =404;
+                try_files \$uri \$uri/ =404;
         }
 }" >> /etc/nginx/sites-available/$1 #check
 wait
