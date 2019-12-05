@@ -1,5 +1,7 @@
 These scripts use the DigitalOcean guides for Ubuntu 18.04 to setup a server with a sudo user, running Nginx + NodeJS with a Let's Encrypt SSL certificate, along with MongoDB (based on the official MongoDB installation guide)
 
+**Important: This code currently only runs when using subdomains. I haven't checked for normal domains yet.**
+
 Log into your server as root:  
 ```ssh root@<your-server-ip>```  
 Clone this repository:  
